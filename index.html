@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>World Foods Halal Market | Shop Local, Eat Global</title>
-  <meta name="description" content="World Foods Halal Market – Minneapolis's premier halal grocery store. Fresh halal meats, international groceries, Afghan bread, spices & more at 6626 Penn Ave S."/>
+  <title>World Foods Halal Market | Halal Grocery & Fresh Meat in Richfield, MN</title>
+  <meta name="description" content="World Foods Halal Market in Richfield, MN offers fresh halal meat, Afghan bread, international groceries, spices, dates and everyday essentials at 6626 Penn Ave S."/>
 
   <!-- SEO & social sharing (invisible to visitors — helps Google + link previews) -->
   <link rel="canonical" href="https://wfhalal.com/"/>
   <link rel="icon" type="image/png" href="favicon.png"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="World Foods Halal Market | Minneapolis"/>
-  <meta property="og:description" content="Fresh halal meats, Afghan bread, international groceries. Open daily 10AM–10PM at 6626 Penn Ave S, Minneapolis. EBT accepted."/>
+  <meta property="og:title" content="World Foods Halal Market | Halal Grocery & Fresh Meat in Richfield, MN"/>
+  <meta property="og:description" content="Fresh halal meats, Afghan bread and international groceries. Open daily 10AM–10PM at 6626 Penn Ave S, Richfield, MN. EBT accepted."/>
   <meta property="og:url" content="https://wfhalal.com/"/>
   <meta property="og:image" content="https://wfhalal.com/storefront.jpg"/>
   <meta name="twitter:card" content="summary_large_image"/>
@@ -30,7 +30,7 @@
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "6626 Penn Ave S",
-      "addressLocality": "Minneapolis",
+      "addressLocality": "Richfield",
       "addressRegion": "MN",
       "postalCode": "55423",
       "addressCountry": "US"
@@ -71,6 +71,10 @@
 
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: #1f2937; background: var(--white); }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
 
     /* ── NAV ── */
     nav {
@@ -103,7 +107,10 @@
       font-weight: 700 !important;
     }
     .nav-cta::after { display: none !important; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer;
+      background: transparent; border: 0; padding: .35rem;
+    }
     .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: .3s; }
     .mobile-menu {
       display: none; position: fixed; top: 72px; left: 0; right: 0;
@@ -207,6 +214,7 @@
       padding: 1.75rem 1.5rem; text-align: center;
       border: 1px solid var(--border);
       transition: transform .25s, box-shadow .25s, border-color .25s;
+      cursor: pointer; font: inherit;
     }
     .cat-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(0,0,0,.1); border-color: var(--green3); }
     .cat-icon { font-size: 2.25rem; margin-bottom: 1rem; }
@@ -318,6 +326,19 @@
       font-family: 'Inter', sans-serif;
     }
     .contact-form button:hover { background: var(--green2); transform: translateY(-2px); }
+    .contact-panel {
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 8px; padding: 1.75rem;
+    }
+    .contact-panel h3 { color: var(--white); font-size: 1.1rem; margin-bottom: .65rem; }
+    .contact-panel p { color: rgba(255,255,255,.65); font-size: .9rem; line-height: 1.6; }
+    .contact-actions { display: flex; flex-direction: column; gap: .85rem; margin-top: 1.5rem; }
+    .contact-action {
+      display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+      background: var(--green3); color: var(--white); padding: 1rem; border-radius: 6px;
+      text-decoration: none; font-weight: 700; transition: background .2s, transform .2s;
+    }
+    .contact-action:hover { background: var(--green2); transform: translateY(-2px); }
 
     /* ── FOOTER ── */
     footer {
@@ -418,7 +439,7 @@
 
 <!-- NAV -->
 <nav id="main-nav">
-  <div class="nav-logo"><img src="logo_transparent.png" alt="World Foods Halal Market"/></div>
+  <div class="nav-logo"><img src="logo_transparent.png" alt="World Foods Halal Market" decoding="async"/></div>
   <ul class="nav-links">
     <li><a href="#" onclick="showView('home')" class="nav-link active" data-view="home">Home</a></li>
     <li><a href="#" onclick="showView('about')" class="nav-link" data-view="about">About</a></li>
@@ -426,9 +447,9 @@
     <li><a href="#" onclick="showView('meat')" class="nav-link" data-view="meat">🥩 Meat Counter</a></li>
     <li><a href="#" onclick="showView('contact')" class="nav-link nav-cta" data-view="contact">Contact Us</a></li>
   </ul>
-  <div class="hamburger" id="ham" onclick="toggleMenu()">
+  <button class="hamburger" id="ham" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMenu()">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 <div class="mobile-menu" id="mobile-menu">
   <ul>
@@ -446,21 +467,21 @@
   <!-- Hero -->
   <div class="hero">
     <div class="hero-content">
-      <div class="hero-badge"><i class="fas fa-certificate"></i> Certified Halal Grocery</div>
-      <h1>Minnesota's Favorite<br><em>Halal Market</em></h1>
+      <div class="hero-badge"><i class="fas fa-store"></i> Fresh Halal Meat & Grocery</div>
+      <h1>Your Neighborhood<br><em>Halal Market</em></h1>
       <p>Fresh halal meats, Afghan fresh bread, international groceries, spices, nuts, dates and everyday essentials — all under one roof.</p>
       <div class="hero-btns">
         <a href="tel:6512520042" class="btn-gold"><i class="fas fa-phone"></i> (651) 252-0042</a>
-        <a href="https://maps.google.com/?q=6626+Penn+Ave+S+Minneapolis+MN+55423" target="_blank" class="btn-ghost"><i class="fas fa-map-marker-alt"></i> Get Directions</a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=6626+Penn+Ave+S+Richfield+MN+55423" target="_blank" rel="noopener noreferrer" class="btn-ghost"><i class="fas fa-map-marker-alt"></i> Get Directions</a>
       </div>
       <div class="hero-cards">
         <div class="hero-card">
-          <div class="hero-card-num">3,200+</div>
-          <div class="hero-card-label">Products</div>
+          <div class="hero-card-num">Fresh</div>
+          <div class="hero-card-label">Halal Meat</div>
         </div>
         <div class="hero-card">
-          <div class="hero-card-num">100%</div>
-          <div class="hero-card-label">Halal Certified</div>
+          <div class="hero-card-num">Custom</div>
+          <div class="hero-card-label">Meat Cuts</div>
         </div>
         <div class="hero-card">
           <div class="hero-card-num">Open Daily</div>
@@ -478,11 +499,11 @@
     </div>
     <div class="info-item">
       <i class="fas fa-map-marker-alt info-icon"></i>
-      <div><h4>Our Location</h4><p>6626 Penn Ave S, Minneapolis, MN 55423</p></div>
+      <div><h4>Our Location</h4><p>6626 Penn Ave S, Richfield, MN 55423</p></div>
     </div>
     <div class="info-item">
       <i class="fas fa-phone info-icon"></i>
-      <div><h4>Call Us</h4><p>(651) 252-0042</p></div>
+      <div><h4>Call Us</h4><p><a href="tel:6512520042" style="color:inherit;text-decoration:none;">(651) 252-0042</a></p></div>
     </div>
   </div>
 
@@ -494,19 +515,19 @@
       <p class="section-sub">From fresh halal meats to international spices — everything your family needs in one place.</p>
     </div>
     <div class="cat-grid">
-      <div class="cat-card" onclick="showView('meat')" style="cursor:pointer; border:2px solid #15803d;"><div class="cat-icon">🥩</div><h3>Fresh Halal Meats</h3><p>Beef, lamb, goat & chicken — plus Chicken & Beef Suqaar, our Somali community favorite. Hand-slaughtered, certified halal.</p></div>
-      <div class="cat-card" onclick="showDept('produce')" style="cursor:pointer;"><div class="cat-icon">🥬</div><h3>Fresh Produce</h3><p>Fresh vegetables, herbs & seasonal fruit, restocked regularly</p></div>
-      <div class="cat-card" onclick="showDept('bread')" style="cursor:pointer;"><div class="cat-icon">🍞</div><h3>Afghan Fresh Bread</h3><p>Freshly baked traditional Afghan naan & breads daily</p></div>
-      <div class="cat-card" onclick="showDept('spices')" style="cursor:pointer;"><div class="cat-icon">🌶️</div><h3>Spices & Seasonings</h3><p>Authentic spices from Middle East, South Asia & Africa</p></div>
-      <div class="cat-card" onclick="showDept('rice')" style="cursor:pointer;"><div class="cat-icon">🌾</div><h3>Rice & Dry Goods</h3><p>Basmati, lentils, chana dal, chickpeas & more</p></div>
-      <div class="cat-card" onclick="showDept('groceries')" style="cursor:pointer;"><div class="cat-icon">🫙</div><h3>International Groceries</h3><p>Sauces, olives, pickles & condiments from around the world</p></div>
-      <div class="cat-card" onclick="showDept('nuts')" style="cursor:pointer;"><div class="cat-icon">🥜</div><h3>Nuts, Dates & Snacks</h3><p>Premium dates, mixed nuts, dried fruits & traditional snacks</p></div>
-      <div class="cat-card" onclick="showDept('biscuits')" style="cursor:pointer;"><div class="cat-icon">🍪</div><h3>Biscuits & Sweets</h3><p>International cookies, sweets and confectionery</p></div>
-      <div class="cat-card" onclick="showDept('household')" style="cursor:pointer;"><div class="cat-icon">🧴</div><h3>Household Items</h3><p>Cleaning supplies, personal care & everyday essentials</p></div>
-      <div class="cat-card" onclick="showDept('beverages')" style="cursor:pointer;"><div class="cat-icon">🥤</div><h3>Beverages & Drinks</h3><p>Red Bull, Vimto, Barbican, Laziza, juices & international sodas</p></div>
-      <div class="cat-card" onclick="showDept('perfumes')" style="cursor:pointer;"><div class="cat-icon">🌸</div><h3>Arabic Perfumes</h3><p>Authentic Arabic fragrances, attars & international perfume brands</p></div>
-      <div class="cat-card" onclick="showDept('frozen')" style="cursor:pointer;"><div class="cat-icon">🍦</div><h3>Frozen Desserts</h3><p>Kulfi, ice cream and traditional frozen South Asian sweets</p></div>
-      <div class="cat-card" onclick="showDept('art')" style="cursor:pointer;"><div class="cat-icon">🖼️</div><h3>Islamic Art & Decor</h3><p>Ayatul Kursi frames, Islamic calligraphy art and home decor</p></div>
+      <button type="button" class="cat-card" onclick="showView('meat')" style="border:2px solid #15803d;"><div class="cat-icon">🥩</div><h3>Fresh Halal Meats</h3><p>Beef, lamb, goat & chicken — plus Chicken & Beef Suqaar. Hand-slaughtered, certified halal.</p></button>
+      <button type="button" class="cat-card" onclick="showDept('produce')"><div class="cat-icon">🥬</div><h3>Fresh Produce</h3><p>Fresh vegetables, herbs & seasonal fruit, restocked regularly</p></button>
+      <button type="button" class="cat-card" onclick="showDept('bread')"><div class="cat-icon">🍞</div><h3>Afghan Fresh Bread</h3><p>Freshly baked traditional Afghan naan & breads daily</p></button>
+      <button type="button" class="cat-card" onclick="showDept('spices')"><div class="cat-icon">🌶️</div><h3>Spices & Seasonings</h3><p>Authentic spices from Middle East, South Asia & Africa</p></button>
+      <button type="button" class="cat-card" onclick="showDept('rice')"><div class="cat-icon">🌾</div><h3>Rice & Dry Goods</h3><p>Basmati, lentils, chana dal, chickpeas & more</p></button>
+      <button type="button" class="cat-card" onclick="showDept('groceries')"><div class="cat-icon">🫙</div><h3>International Groceries</h3><p>Sauces, olives, pickles & condiments from around the world</p></button>
+      <button type="button" class="cat-card" onclick="showDept('nuts')"><div class="cat-icon">🥜</div><h3>Nuts, Dates & Snacks</h3><p>Premium dates, mixed nuts, dried fruits & traditional snacks</p></button>
+      <button type="button" class="cat-card" onclick="showDept('biscuits')"><div class="cat-icon">🍪</div><h3>Biscuits & Sweets</h3><p>International cookies, sweets and confectionery</p></button>
+      <button type="button" class="cat-card" onclick="showDept('household')"><div class="cat-icon">🧴</div><h3>Household Items</h3><p>Cleaning supplies, personal care & everyday essentials</p></button>
+      <button type="button" class="cat-card" onclick="showDept('beverages')"><div class="cat-icon">🥤</div><h3>Beverages & Drinks</h3><p>Red Bull, Vimto, Barbican, Laziza, juices & international sodas</p></button>
+      <button type="button" class="cat-card" onclick="showDept('perfumes')"><div class="cat-icon">🌸</div><h3>Arabic Perfumes</h3><p>Authentic Arabic fragrances, attars & international perfume brands</p></button>
+      <button type="button" class="cat-card" onclick="showDept('frozen')"><div class="cat-icon">🍦</div><h3>Frozen Desserts</h3><p>Kulfi, ice cream and traditional frozen South Asian sweets</p></button>
+      <button type="button" class="cat-card" onclick="showDept('art')"><div class="cat-icon">🖼️</div><h3>Islamic Art & Decor</h3><p>Ayatul Kursi frames, Islamic calligraphy art and home decor</p></button>
     </div>
   </section>
 
@@ -518,23 +539,23 @@
     </div>
     <div class="photo-grid" style="max-width:1100px;margin:3rem auto 0;">
       <div class="photo-item big">
-        <img src="storefront.jpg" alt="World Foods Halal Market Store Front"/>
-        <div class="photo-label">📍 6626 Penn Ave S, Minneapolis — Grocery, Bakery & Halal Meat</div>
+        <img src="storefront.jpg" alt="World Foods Halal Market Store Front" loading="lazy" decoding="async"/>
+        <div class="photo-label">📍 6626 Penn Ave S, Richfield — Grocery, Bakery & Halal Meat</div>
       </div>
       <div class="photo-item">
-        <img src="aisle1.jpg" alt="Grocery aisles"/>
+        <img src="aisle1.jpg" alt="Grocery aisles" loading="lazy" decoding="async"/>
         <div class="photo-label">Well-stocked grocery aisles</div>
       </div>
       <div class="photo-item">
-        <img src="aisle2.jpg" alt="International sauces"/>
+        <img src="aisle2.jpg" alt="International sauces" loading="lazy" decoding="async"/>
         <div class="photo-label">International sauces & condiments</div>
       </div>
       <div class="photo-item">
-        <img src="aisle3.jpg" alt="Nuts and dates"/>
+        <img src="aisle3.jpg" alt="Nuts and dates" loading="lazy" decoding="async"/>
         <div class="photo-label">Nuts, dates & dry goods</div>
       </div>
       <div class="photo-item">
-        <img src="aisle4.jpg" alt="Snacks and biscuits"/>
+        <img src="aisle4.jpg" alt="Snacks and biscuits" loading="lazy" decoding="async"/>
         <div class="photo-label">Snacks & biscuits from around the world</div>
       </div>
     </div>
@@ -542,7 +563,7 @@
 
   <!-- Map -->
   <div class="map-section">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2823.9657352957747!2d-93.30861668445995!3d44.88283497909842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f627c78dd0e379%3A0x6f4d22f7d11fb3f8!2s6626%20Penn%20Ave%20S%2C%20Minneapolis%2C%20MN%2055423!5e0!3m2!1sen!2sus!4v1625555555555!5m2!1sen!2sus" allowfullscreen="" loading="lazy" title="World Foods Halal Market Location"></iframe>
+    <iframe src="https://www.google.com/maps?q=6626%20Penn%20Ave%20S%20Richfield%20MN%2055423&output=embed" allowfullscreen="" loading="lazy" title="Map to World Foods Halal Market in Richfield, Minnesota"></iframe>
   </div>
 
 </div><!-- /home -->
@@ -551,22 +572,22 @@
 <div id="view-about" class="view">
   <div class="page-hero">
     <h1>About Us</h1>
-    <p>A family-owned halal grocery store proudly serving Minneapolis</p>
+    <p>A family-owned halal grocery store proudly serving Richfield and south Minneapolis</p>
   </div>
   <section class="about">
     <div class="about-grid">
       <div>
-        <img src="storefront.jpg" alt="World Foods Halal Market store front"/>
+        <img src="storefront.jpg" alt="World Foods Halal Market store front" loading="lazy" decoding="async"/>
       </div>
       <div>
         <span class="section-tag">Our Story</span>
-        <h2 class="section-title">Serving Minneapolis with Quality Halal Products</h2>
-        <p class="section-sub">World Foods Halal Market is a family-owned grocery store proudly serving the Minneapolis community. We specialize in fresh halal meats, international groceries, Afghan fresh bread, dry goods, spices, nuts, dates and everyday essentials from around the world.</p>
+        <h2 class="section-title">Serving Richfield with Quality Halal Products</h2>
+        <p class="section-sub">World Foods Halal Market is a family-owned grocery store in Richfield, proudly serving nearby south Minneapolis and surrounding communities. We specialize in fresh halal meats, international groceries, Afghan fresh bread, dry goods, spices, nuts, dates and everyday essentials from around the world.</p>
         <p class="section-sub" style="margin-top:1rem;">Our mission is simple — provide high-quality halal products, friendly service, and a welcoming shopping experience for every customer who walks through our doors.</p>
         <div class="about-features">
-          <div class="feat"><div class="feat-icon">🏅</div><div><h4>Certified Halal</h4><p>All meats are hand-slaughtered and certified halal to the highest standards.</p></div></div>
+          <div class="feat"><div class="feat-icon">🏅</div><div><h4>Certified Halal</h4><p>All meats are hand-slaughtered and certified halal according to halal guidelines.</p></div></div>
           <div class="feat"><div class="feat-icon">🌍</div><div><h4>Global Selection</h4><p>Products from the Middle East, South Asia, Africa, and beyond — all in one store.</p></div></div>
-          <div class="feat"><div class="feat-icon">🤝</div><div><h4>Community First</h4><p>Family-owned and deeply rooted in the Minneapolis community we serve.</p></div></div>
+          <div class="feat"><div class="feat-icon">🤝</div><div><h4>Community First</h4><p>Family-owned and rooted in the Richfield and south Minneapolis community we serve.</p></div></div>
           <div class="feat"><div class="feat-icon">💳</div><div><h4>EBT / SNAP Accepted</h4><p>We proudly accept EBT for eligible food items to serve all members of our community.</p></div></div>
         </div>
       </div>
@@ -582,17 +603,17 @@
   </div>
   <section class="products">
     <div class="products-grid">
-      <div class="product-card"><img src="aisle4.jpg" alt="Halal Meats"/><div class="product-body"><h3>Fresh Halal Meats</h3><p>Premium halal-certified beef, lamb, goat and chicken. Hand-slaughtered according to Islamic guidelines.</p><div class="product-tags"><span class="tag">Beef</span><span class="tag">Lamb</span><span class="tag">Goat</span><span class="tag">Chicken</span></div></div></div>
-      <div class="product-card"><img src="aisle1.jpg" alt="Groceries"/><div class="product-body"><h3>International Groceries</h3><p>Canned goods, cereals, dairy, cooking essentials and international brands from around the world.</p><div class="product-tags"><span class="tag">Dairy</span><span class="tag">Canned Goods</span><span class="tag">Cereals</span></div></div></div>
-      <div class="product-card"><img src="aisle2.jpg" alt="Sauces & Condiments"/><div class="product-body"><h3>Sauces & Condiments</h3><p>Hot sauces, chili garlic, olives, pickles and condiments from Pakistan, Middle East and beyond.</p><div class="product-tags"><span class="tag">Hot Sauce</span><span class="tag">Olives</span><span class="tag">Pickles</span></div></div></div>
-      <div class="product-card"><img src="aisle3.jpg" alt="Nuts & Dates"/><div class="product-body"><h3>Nuts, Dates & Dry Fruits</h3><p>Premium Medjool dates, Deglet Noor, mixed nuts, dried fruits and traditional Afghan snacks.</p><div class="product-tags"><span class="tag">Dates</span><span class="tag">Nuts</span><span class="tag">Dry Fruits</span></div></div></div>
-      <div class="product-card"><img src="aisle5.jpg" alt="Biscuits & Sweets"/><div class="product-body"><h3>Biscuits & Sweets</h3><p>Sooper biscuits, international cookies, wafers and traditional sweet treats from South Asia.</p><div class="product-tags"><span class="tag">Biscuits</span><span class="tag">Cookies</span><span class="tag">Sweets</span></div></div></div>
-      <div class="product-card"><img src="aisle6.jpg" alt="Rice & Grains"/><div class="product-body"><h3>Rice, Grains & Lentils</h3><p>Basmati rice, chana dal, kabuli chana, vermicelli, lentils and pulses in bulk and packaged.</p><div class="product-tags"><span class="tag">Basmati</span><span class="tag">Lentils</span><span class="tag">Chana Dal</span></div></div></div>
-      <div class="product-card"><img src="drinks1.jpg" alt="Beverages"/><div class="product-body"><h3>Beverages & Cold Drinks</h3><p>Red Bull, Monster, Vimto, Barbican, Carabao, Falooda, Badam milk, juices and more — chilled and ready.</p><div class="product-tags"><span class="tag">Energy Drinks</span><span class="tag">Vimto</span><span class="tag">Barbican</span><span class="tag">Juices</span></div></div></div>
-      <div class="product-card"><img src="drinks3.jpg" alt="Sodas"/><div class="product-body"><h3>Sodas & Water</h3><p>Coca-Cola, Pepsi, Fanta, Sprite, Mountain Dew, sparkling water, Gatorade and international sodas.</p><div class="product-tags"><span class="tag">Coca-Cola</span><span class="tag">Pepsi</span><span class="tag">Fanta</span><span class="tag">Water</span></div></div></div>
-      <div class="product-card"><img src="perfume.jpg" alt="Perfumes"/><div class="product-body"><h3>Arabic Perfumes & Fragrances</h3><p>Authentic Arabic attars, oud-based perfumes and international fragrance brands in our glass display case.</p><div class="product-tags"><span class="tag">Oud</span><span class="tag">Attar</span><span class="tag">Arabic Perfumes</span></div></div></div>
-      <div class="product-card"><img src="frozen.jpg" alt="Frozen Desserts"/><div class="product-body"><h3>Frozen Kulfi & Desserts</h3><p>Shahi Kulfi, malai kulfi, pistachio, chocolate and coconut flavors — traditional South Asian frozen treats.</p><div class="product-tags"><span class="tag">Kulfi</span><span class="tag">Malai</span><span class="tag">Pistachio</span></div></div></div>
-      <div class="product-card"><img src="islamic_art.jpg" alt="Islamic Art"/><div class="product-body"><h3>Islamic Art & Home Decor</h3><p>Beautiful Ayatul Kursi frames, Islamic calligraphy wall art and home decor for your family.</p><div class="product-tags"><span class="tag">Ayatul Kursi</span><span class="tag">Calligraphy</span><span class="tag">Frames</span></div></div></div>
+      <div class="product-card"><img src="aisle4.jpg" alt="Halal Meats" loading="lazy" decoding="async"/><div class="product-body"><h3>Fresh Halal Meats</h3><p>Premium halal-certified beef, lamb, goat and chicken. Hand-slaughtered according to Islamic guidelines.</p><div class="product-tags"><span class="tag">Beef</span><span class="tag">Lamb</span><span class="tag">Goat</span><span class="tag">Chicken</span></div></div></div>
+      <div class="product-card"><img src="aisle1.jpg" alt="Groceries" loading="lazy" decoding="async"/><div class="product-body"><h3>International Groceries</h3><p>Canned goods, cereals, dairy, cooking essentials and international brands from around the world.</p><div class="product-tags"><span class="tag">Dairy</span><span class="tag">Canned Goods</span><span class="tag">Cereals</span></div></div></div>
+      <div class="product-card"><img src="aisle2.jpg" alt="Sauces & Condiments" loading="lazy" decoding="async"/><div class="product-body"><h3>Sauces & Condiments</h3><p>Hot sauces, chili garlic, olives, pickles and condiments from Pakistan, Middle East and beyond.</p><div class="product-tags"><span class="tag">Hot Sauce</span><span class="tag">Olives</span><span class="tag">Pickles</span></div></div></div>
+      <div class="product-card"><img src="aisle3.jpg" alt="Nuts & Dates" loading="lazy" decoding="async"/><div class="product-body"><h3>Nuts, Dates & Dry Fruits</h3><p>Premium Medjool dates, Deglet Noor, mixed nuts, dried fruits and traditional Afghan snacks.</p><div class="product-tags"><span class="tag">Dates</span><span class="tag">Nuts</span><span class="tag">Dry Fruits</span></div></div></div>
+      <div class="product-card"><img src="aisle5.jpg" alt="Biscuits & Sweets" loading="lazy" decoding="async"/><div class="product-body"><h3>Biscuits & Sweets</h3><p>Sooper biscuits, international cookies, wafers and traditional sweet treats from South Asia.</p><div class="product-tags"><span class="tag">Biscuits</span><span class="tag">Cookies</span><span class="tag">Sweets</span></div></div></div>
+      <div class="product-card"><img src="aisle6.jpg" alt="Rice & Grains" loading="lazy" decoding="async"/><div class="product-body"><h3>Rice, Grains & Lentils</h3><p>Basmati rice, chana dal, kabuli chana, vermicelli, lentils and pulses in bulk and packaged.</p><div class="product-tags"><span class="tag">Basmati</span><span class="tag">Lentils</span><span class="tag">Chana Dal</span></div></div></div>
+      <div class="product-card"><img src="drinks1.jpg" alt="Beverages" loading="lazy" decoding="async"/><div class="product-body"><h3>Beverages & Cold Drinks</h3><p>Red Bull, Monster, Vimto, Barbican, Carabao, Falooda, Badam milk, juices and more — chilled and ready.</p><div class="product-tags"><span class="tag">Energy Drinks</span><span class="tag">Vimto</span><span class="tag">Barbican</span><span class="tag">Juices</span></div></div></div>
+      <div class="product-card"><img src="drinks3.jpg" alt="Sodas" loading="lazy" decoding="async"/><div class="product-body"><h3>Sodas & Water</h3><p>Coca-Cola, Pepsi, Fanta, Sprite, Mountain Dew, sparkling water, Gatorade and international sodas.</p><div class="product-tags"><span class="tag">Coca-Cola</span><span class="tag">Pepsi</span><span class="tag">Fanta</span><span class="tag">Water</span></div></div></div>
+      <div class="product-card"><img src="perfume.jpg" alt="Perfumes" loading="lazy" decoding="async"/><div class="product-body"><h3>Arabic Perfumes & Fragrances</h3><p>Authentic Arabic attars, oud-based perfumes and international fragrance brands in our glass display case.</p><div class="product-tags"><span class="tag">Oud</span><span class="tag">Attar</span><span class="tag">Arabic Perfumes</span></div></div></div>
+      <div class="product-card"><img src="frozen.jpg" alt="Frozen Desserts" loading="lazy" decoding="async"/><div class="product-body"><h3>Frozen Kulfi & Desserts</h3><p>Shahi Kulfi, malai kulfi, pistachio, chocolate and coconut flavors — traditional South Asian frozen treats.</p><div class="product-tags"><span class="tag">Kulfi</span><span class="tag">Malai</span><span class="tag">Pistachio</span></div></div></div>
+      <div class="product-card"><img src="islamic_art.jpg" alt="Islamic Art" loading="lazy" decoding="async"/><div class="product-body"><h3>Islamic Art & Home Decor</h3><p>Beautiful Ayatul Kursi frames, Islamic calligraphy wall art and home decor for your family.</p><div class="product-tags"><span class="tag">Ayatul Kursi</span><span class="tag">Calligraphy</span><span class="tag">Frames</span></div></div></div>
     </div>
   </section>
 </div>
@@ -630,23 +651,25 @@
   <section class="contact">
     <div class="contact-grid">
       <div class="contact-items">
-        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h4>Address</h4><p>6626 Penn Ave S<br>Minneapolis, MN 55423</p></div></div>
-        <div class="contact-item"><i class="fas fa-phone"></i><div><h4>Phone</h4><p>(651) 252-0042</p></div></div>
+        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h4>Address</h4><p>6626 Penn Ave S<br>Richfield, MN 55423</p></div></div>
+        <div class="contact-item"><i class="fas fa-phone"></i><div><h4>Phone</h4><p><a href="tel:6512520042" style="color:#4ade80;text-decoration:none;">(651) 252-0042</a></p></div></div>
         <div class="contact-item"><i class="fas fa-clock"></i><div><h4>Store Hours</h4><p>Monday – Sunday<br>10:00 AM – 10:00 PM</p></div></div>
         <div class="contact-item"><i class="fas fa-envelope"></i><div><h4>Email Us</h4><p><a href="mailto:contact@wfhalal.com" style="color:#4ade80;text-decoration:none;">contact@wfhalal.com</a></p></div></div>
       <div class="contact-item"><i class="fas fa-credit-card"></i><div><h4>We Accept</h4><p>Cash · Credit/Debit Cards · EBT/SNAP</p></div></div>
       </div>
-      <form class="contact-form" onsubmit="handleForm(event)">
-        <input type="text" placeholder="Your Name" required/>
-        <input type="email" placeholder="Your Email" required/>
-        <input type="tel" placeholder="Your Phone (optional)"/>
-        <textarea placeholder="How can we help you?"></textarea>
-        <button type="submit"><i class="fas fa-paper-plane" style="margin-right:.5rem"></i>Send Message</button>
-      </form>
+      <div class="contact-panel">
+        <h3>Contact the Store</h3>
+        <p>For questions about products, meat cuts, bakery availability, or store hours, please call or email us directly.</p>
+        <div class="contact-actions">
+          <a href="tel:6512520042" class="contact-action"><i class="fas fa-phone"></i> Call (651) 252-0042</a>
+          <a href="mailto:contact@wfhalal.com" class="contact-action"><i class="fas fa-envelope"></i> Email contact@wfhalal.com</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=6626+Penn+Ave+S+Richfield+MN+55423" target="_blank" rel="noopener noreferrer" class="contact-action"><i class="fas fa-map-marker-alt"></i> Get Directions</a>
+        </div>
+      </div>
     </div>
   </section>
   <div class="map-section">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2823.9657352957747!2d-93.30861668445995!3d44.88283497909842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f627c78dd0e379%3A0x6f4d22f7d11fb3f8!2s6626%20Penn%20Ave%20S%2C%20Minneapolis%2C%20MN%2055423!5e0!3m2!1sen!2sus!4v1625555555555!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps?q=6626%20Penn%20Ave%20S%20Richfield%20MN%2055423&output=embed" allowfullscreen="" loading="lazy" title="Map to World Foods Halal Market in Richfield, Minnesota"></iframe>
   </div>
 </div>
 
@@ -654,7 +677,7 @@
 <div id="view-meat" class="view">
   <div class="page-hero" style="background: linear-gradient(135deg, #1a0505 0%, #7f1d1d 100%);">
     <h1>🥩 Fresh Halal Meat Counter</h1>
-    <p>Hand-slaughtered, certified halal — fresh daily at 6626 Penn Ave S</p>
+    <p>Hand-slaughtered, certified halal — fresh daily at 6626 Penn Ave S in Richfield</p>
   </div>
 
   <section style="background:#fff; padding: 60px 5%;">
@@ -672,7 +695,7 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:1.5rem; margin-bottom:3rem;">
 
         <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden; transition:.25s;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
-          <img src="meat_chicken_whole.jpg" alt="Whole Chicken" style="width:100%;height:200px;object-fit:cover;"/>
+          <img src="meat_chicken_whole.jpg" alt="Whole Chicken" style="width:100%;height:200px;object-fit:cover;" loading="lazy" decoding="async"/>
           <div style="padding:1.25rem;">
             <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Whole Chicken</h3>
             <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Fresh whole halal chicken, perfect for roasting or grilling</p>
@@ -681,7 +704,7 @@
         </div>
 
         <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
-          <img src="meat_chicken_breast.jpg" alt="Chicken Breast" style="width:100%;height:200px;object-fit:cover;"/>
+          <img src="meat_chicken_breast.jpg" alt="Chicken Breast" style="width:100%;height:200px;object-fit:cover;" loading="lazy" decoding="async"/>
           <div style="padding:1.25rem;">
             <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Chicken Breast</h3>
             <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Boneless skinless chicken breast — lean and fresh</p>
@@ -690,7 +713,7 @@
         </div>
 
         <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
-          <img src="meat_drumstick.jpg" alt="Chicken Drumsticks" style="width:100%;height:200px;object-fit:cover;"/>
+          <img src="meat_drumstick.jpg" alt="Chicken Drumsticks" style="width:100%;height:200px;object-fit:cover;" loading="lazy" decoding="async"/>
           <div style="padding:1.25rem;">
             <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Chicken Drumsticks</h3>
             <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Fresh halal chicken drumsticks — great for BBQ & curries</p>
@@ -699,7 +722,7 @@
         </div>
 
         <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
-          <img src="meat_chicken_legs.jpg" alt="Chicken Legs" style="width:100%;height:200px;object-fit:cover;"/>
+          <img src="meat_chicken_legs.jpg" alt="Chicken Legs" style="width:100%;height:200px;object-fit:cover;" loading="lazy" decoding="async"/>
           <div style="padding:1.25rem;">
             <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Chicken Legs (No Skin)</h3>
             <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Skinless chicken legs — perfect for healthy cooking</p>
@@ -708,7 +731,7 @@
         </div>
 
         <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
-          <img src="meat_ground_beef.jpg" alt="Ground Beef" style="width:100%;height:200px;object-fit:cover;"/>
+          <img src="meat_ground_beef.jpg" alt="Ground Beef" style="width:100%;height:200px;object-fit:cover;" loading="lazy" decoding="async"/>
           <div style="padding:1.25rem;">
             <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Ground Beef</h3>
             <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Fresh halal ground beef — ideal for kabobs, burgers & keema</p>
@@ -717,7 +740,7 @@
         </div>
 
         <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
-          <img src="meat_lamb.png" alt="Lamb" style="width:100%;height:200px;object-fit:cover;background:#f9f9f9;"/>
+          <img src="meat_lamb.png" alt="Lamb" style="width:100%;height:200px;object-fit:cover;background:#f9f9f9;" loading="lazy" decoding="async"/>
           <div style="padding:1.25rem;">
             <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Lamb / Mutton</h3>
             <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Fresh halal lamb leg, chops and shoulder cuts available</p>
@@ -726,7 +749,7 @@
         </div>
 
         <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
-          <img src="meat_goat_liver.jpg" alt="Goat Liver" style="width:100%;height:200px;object-fit:cover;"/>
+          <img src="meat_goat_liver.jpg" alt="Goat Liver" style="width:100%;height:200px;object-fit:cover;" loading="lazy" decoding="async"/>
           <div style="padding:1.25rem;">
             <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Goat Liver</h3>
             <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Fresh halal goat liver — a traditional favorite</p>
@@ -737,28 +760,28 @@
 
         <!-- Chicken Suqaar -->
         <div style="border:2px solid #15803d; border-radius:10px; overflow:hidden; position:relative;" onmouseover="this.style.boxShadow='0 12px 32px rgba(21,128,61,.25)'" onmouseout="this.style.boxShadow='none'">
-          <div style="position:absolute;top:12px;right:12px;background:#d4a017;color:#111;font-size:.7rem;font-weight:800;padding:.25rem .6rem;border-radius:3px;letter-spacing:.05em;z-index:1;">⭐ COMMUNITY FAVORITE</div>
-          <img src="chicken_suqaar.jpg" alt="Chicken Suqaar" style="width:100%;height:200px;object-fit:cover;"/>
+          <div style="position:absolute;top:12px;right:12px;background:#d4a017;color:#111;font-size:.7rem;font-weight:800;padding:.25rem .6rem;border-radius:3px;letter-spacing:.05em;z-index:1;">SOMALI-STYLE CUT</div>
+          <img src="chicken_suqaar.jpg" alt="Chicken Suqaar" style="width:100%;height:200px;object-fit:cover;" loading="lazy" decoding="async"/>
           <div style="padding:1.25rem;">
             <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Chicken Suqaar 🍗 <span style="font-size:.7rem;color:#15803d;font-weight:600;">(Freshly Diced)</span></h3>
-            <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Freshly diced halal chicken — the beloved Somali community favorite. Perfect for stir-fry, rice dishes and stews.</p>
+            <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Freshly diced halal chicken for Somali-style suqaar. Perfect for stir-fry, rice dishes and stews.</p>
             <div style="display:flex;gap:.5rem;flex-wrap:wrap;">
               <span style="background:#f0fdf4;color:#166534;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Halal Certified</span>
-              <span style="background:#fff7ed;color:#c2410c;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Somali Favorite</span>
+              <span style="background:#fff7ed;color:#c2410c;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Somali-Style</span>
             </div>
           </div>
         </div>
 
         <!-- Beef Suqaar -->
         <div style="border:2px solid #15803d; border-radius:10px; overflow:hidden; position:relative;" onmouseover="this.style.boxShadow='0 12px 32px rgba(21,128,61,.25)'" onmouseout="this.style.boxShadow='none'">
-          <div style="position:absolute;top:12px;right:12px;background:#d4a017;color:#111;font-size:.7rem;font-weight:800;padding:.25rem .6rem;border-radius:3px;letter-spacing:.05em;z-index:1;">⭐ COMMUNITY FAVORITE</div>
-          <img src="beef_suqaar.png" alt="Beef Suqaar" style="width:100%;height:200px;object-fit:cover;"/>
+          <div style="position:absolute;top:12px;right:12px;background:#d4a017;color:#111;font-size:.7rem;font-weight:800;padding:.25rem .6rem;border-radius:3px;letter-spacing:.05em;z-index:1;">SOMALI-STYLE CUT</div>
+          <img src="beef_suqaar.png" alt="Beef Suqaar" style="width:100%;height:200px;object-fit:cover;" loading="lazy" decoding="async"/>
           <div style="padding:1.25rem;">
             <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Beef Suqaar 🥩 <span style="font-size:.7rem;color:#15803d;font-weight:600;">(Freshly Diced)</span></h3>
             <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Freshly diced halal beef — tender cubes perfect for the classic Somali suqaar dish with onions and peppers.</p>
             <div style="display:flex;gap:.5rem;flex-wrap:wrap;">
               <span style="background:#f0fdf4;color:#166534;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Halal Certified</span>
-              <span style="background:#fff7ed;color:#c2410c;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Somali Favorite</span>
+              <span style="background:#fff7ed;color:#c2410c;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Somali-Style</span>
             </div>
           </div>
         </div>
@@ -785,13 +808,8 @@
 <footer>
   <div class="footer-grid">
     <div>
-      <div class="footer-logo"><img src="logo_transparent.png" alt="World Foods Halal Market"/></div>
-      <p class="footer-desc">Your neighborhood halal grocery store in Minneapolis. Fresh meats, international groceries, Afghan bread and everyday essentials — Shop Local, Eat Global.</p>
-      <div class="footer-socials">
-        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
-      </div>
+      <div class="footer-logo"><img src="logo_transparent.png" alt="World Foods Halal Market" loading="lazy" decoding="async"/></div>
+      <p class="footer-desc">Your neighborhood halal grocery store in Richfield. Fresh meats, international groceries, Afghan bread and everyday essentials — Shop Local, Eat Global.</p>
     </div>
     <div class="footer-col">
       <h4>Quick Links</h4>
@@ -804,11 +822,11 @@
     </div>
     <div class="footer-col">
       <h4>Store Info</h4>
-      <p>6626 Penn Ave S<br>Minneapolis, MN 55423<br><br>(651) 252-0042<br><a href="mailto:contact@wfhalal.com" style="color:#4ade80;text-decoration:none;">contact@wfhalal.com</a><br><br>Open Daily<br>10:00 AM – 10:00 PM</p>
+      <p>6626 Penn Ave S<br>Richfield, MN 55423<br><br><a href="tel:6512520042" style="color:#4ade80;text-decoration:none;">(651) 252-0042</a><br><a href="mailto:contact@wfhalal.com" style="color:#4ade80;text-decoration:none;">contact@wfhalal.com</a><br><br>Open Daily<br>10:00 AM – 10:00 PM</p>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 World Foods Halal Market. All rights reserved. · Minneapolis, MN</p>
+    <p>© 2026 World Foods Halal Market. All rights reserved. · Richfield, MN</p>
   </div>
 </footer>
 
@@ -988,12 +1006,11 @@
   }
 
   function toggleMenu() {
-    document.getElementById('mobile-menu').classList.toggle('open');
-  }
-  function handleForm(e) {
-    e.preventDefault();
-    alert('Thank you! We will get back to you soon.');
-    e.target.reset();
+    const menu = document.getElementById('mobile-menu');
+    const button = document.getElementById('ham');
+    const isOpen = menu.classList.toggle('open');
+    button.setAttribute('aria-expanded', String(isOpen));
+    button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
   }
 </script>
 </body>
