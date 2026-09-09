@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>World Foods Halal Market | Shop Local, Eat Global</title>
+  <meta name="description" content="World Foods Halal Market – Minneapolis's premier halal grocery store. Fresh halal meats, international groceries, Afghan bread, spices & more at 6626 Penn Ave S."/>
+
+  <!-- SEO & social sharing (invisible to visitors — helps Google + link previews) -->
+  <link rel="canonical" href="https://wfhalal.com/"/>
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="World Foods Halal Market | Minneapolis"/>
+  <meta property="og:description" content="Fresh halal meats, Afghan bread, international groceries. Open daily 10AM–10PM at 6626 Penn Ave S, Minneapolis. EBT accepted."/>
+  <meta property="og:url" content="https://wfhalal.com/"/>
+  <meta property="og:image" content="https://wfhalal.com/storefront.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GroceryStore",
+    "name": "World Foods Halal Market",
+    "alternateName": "Afghan Halal Super Market",
+    "description": "Family-owned halal grocery store with fresh hand-slaughtered halal meats, Afghan bread, and international groceries.",
+    "url": "https://wfhalal.com/",
+    "telephone": "+16512520042",
+    "email": "contact@wfhalal.com",
+    "image": "https://wfhalal.com/storefront.jpg",
+    "priceRange": "$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6626 Penn Ave S",
+      "addressLocality": "Minneapolis",
+      "addressRegion": "MN",
+      "postalCode": "55423",
+      "addressCountry": "US"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 44.882835, "longitude": -93.306617 },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "10:00", "closes": "22:00"
+    },
+    "paymentAccepted": "Cash, Credit Card, Debit Card, EBT, SNAP",
+    "servesCuisine": ["Halal", "Middle Eastern", "Afghan", "Somali", "South Asian"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --dark:       #0a0a0a;
+      --dark2:      #111827;
+      --green:      #0d5c2e;
+      --green2:     #166534;
+      --green3:     #15803d;
+      --green-pale: #f0fdf4;
+      --gold:       #d4a017;
+      --gold2:      #f59e0b;
+      --red:        #c0392b;
+      --white:      #ffffff;
+      --gray:       #6b7280;
+      --light:      #f9fafb;
+      --border:     #e5e7eb;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1f2937; background: var(--white); }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,10,10,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(21,128,61,0.4);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo img { height: 54px; width: auto; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none; color: rgba(255,255,255,0.8);
+      font-size: 0.9rem; font-weight: 500; letter-spacing: 0.03em;
+      transition: color .2s; position: relative; padding-bottom: 4px;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 2px; background: var(--green3); transform: scaleX(0);
+      transition: transform .25s;
+    }
+    .nav-links a:hover { color: var(--green3); }
+    .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+    .nav-links a.active { color: var(--green3); }
+    .nav-cta {
+      background: var(--green3) !important; color: var(--white) !important;
+      padding: 0.5rem 1.4rem !important; border-radius: 4px;
+      font-weight: 700 !important;
+    }
+    .nav-cta::after { display: none !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: .3s; }
+    .mobile-menu {
+      display: none; position: fixed; top: 72px; left: 0; right: 0;
+      background: var(--dark); padding: 1.5rem 5%;
+      border-bottom: 1px solid rgba(21,128,61,0.4);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+    .mobile-menu a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; font-weight: 500; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(to right, rgba(0,0,0,0.65) 45%, rgba(0,0,0,0.15) 100%),
+                  url('storefront.jpg') center/cover no-repeat; background-position: center top;
+      display: flex; align-items: center;
+      padding: 100px 5% 80px;
+    }
+    .hero-content { max-width: 640px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--green3); color: var(--dark);
+      font-size: 0.75rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; padding: .4rem 1rem; border-radius: 2px;
+      margin-bottom: 1.75rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+      color: var(--white); line-height: 1.1; margin-bottom: 1.25rem;
+    }
+    .hero h1 em { font-style: normal; color: var(--green3); }
+    .hero p {
+      color: rgba(255,255,255,0.75); font-size: 1.1rem;
+      line-height: 1.7; margin-bottom: 2.5rem; max-width: 480px;
+    }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-gold {
+      background: var(--green3); color: var(--dark);
+      padding: .9rem 2rem; border-radius: 4px; text-decoration: none;
+      font-weight: 700; font-size: .95rem; transition: background .2s, transform .2s;
+      display: inline-flex; align-items: center; gap: .5rem;
+    }
+    .btn-gold:hover { background: var(--green2); transform: translateY(-2px); }
+    .btn-ghost {
+      border: 2px solid rgba(255,255,255,.5); color: var(--white);
+      padding: .9rem 2rem; border-radius: 4px; text-decoration: none;
+      font-weight: 600; font-size: .95rem; transition: .2s;
+      display: inline-flex; align-items: center; gap: .5rem;
+    }
+    .btn-ghost:hover { border-color: var(--white); background: rgba(255,255,255,.08); }
+    .hero-cards {
+      display: flex; gap: 1.25rem; margin-top: 4rem; flex-wrap: wrap;
+    }
+    .hero-card {
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
+      backdrop-filter: blur(8px); border-radius: 8px;
+      padding: 1rem 1.5rem; text-align: center;
+    }
+    .hero-card-num { font-family: 'Playfair Display', serif; font-size: 1.75rem; color: var(--green3); font-weight: 900; }
+    .hero-card-label { color: rgba(255,255,255,.65); font-size: .78rem; margin-top: .2rem; }
+
+    /* ── INFO STRIP ── */
+    .info-strip {
+      background: var(--green);
+      display: grid; grid-template-columns: repeat(3, 1fr);
+    }
+    .info-item {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1.5rem 2rem; border-right: 1px solid rgba(255,255,255,.15);
+    }
+    .info-item:last-child { border-right: none; }
+    .info-icon { font-size: 1.5rem; color: var(--green3); flex-shrink: 0; }
+    .info-item h4 { color: var(--white); font-weight: 600; font-size: .95rem; }
+    .info-item p { color: rgba(255,255,255,.7); font-size: .85rem; margin-top: .15rem; }
+
+    /* ── SECTIONS ── */
+    section { padding: 90px 5%; }
+    .section-tag {
+      display: inline-block; color: var(--green2);
+      font-size: .75rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; margin-bottom: .75rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      color: var(--dark2); line-height: 1.2; margin-bottom: 1rem;
+    }
+    .section-sub { color: var(--gray); font-size: 1.05rem; line-height: 1.7; }
+    .text-center { text-align: center; }
+    .text-center .section-sub { max-width: 560px; margin: 0 auto; }
+
+    /* ── CATEGORIES ── */
+    .categories { background: var(--light); }
+    .cat-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.25rem; max-width: 1100px; margin: 3rem auto 0;
+    }
+    .cat-card {
+      background: var(--white); border-radius: 8px;
+      padding: 1.75rem 1.5rem; text-align: center;
+      border: 1px solid var(--border);
+      transition: transform .25s, box-shadow .25s, border-color .25s;
+    }
+    .cat-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(0,0,0,.1); border-color: var(--green3); }
+    .cat-icon { font-size: 2.25rem; margin-bottom: 1rem; }
+    .cat-card h3 { font-weight: 700; font-size: .95rem; color: var(--dark2); margin-bottom: .35rem; }
+    .cat-card p { font-size: .82rem; color: var(--gray); line-height: 1.5; }
+
+    /* ── STORE PHOTOS ── */
+    .photos { background: var(--dark2); }
+    .photos .section-tag { color: var(--green3); }
+    .photos .section-title { color: var(--white); }
+    .photo-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1rem; max-width: 1100px; margin: 3rem auto 0;
+    }
+    .photo-grid .big { grid-column: span 2; }
+    .photo-item {
+      overflow: hidden; border-radius: 8px; position: relative;
+    }
+    .photo-item img {
+      width: 100%; height: 320px; object-fit: cover;
+      transition: transform .5s;
+    }
+    .photo-grid .big img { height: 420px; }
+    .photo-item:hover img { transform: scale(1.04); }
+    .photo-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.7), transparent);
+      color: var(--white); padding: 1.25rem 1rem .9rem;
+      font-size: .85rem; font-weight: 600;
+    }
+
+    /* ── PRODUCTS ── */
+    .products { background: var(--white); }
+    .products-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem; max-width: 1100px; margin: 3rem auto 0;
+    }
+    .product-card {
+      border-radius: 8px; overflow: hidden;
+      border: 1px solid var(--border);
+      transition: box-shadow .25s, transform .25s;
+    }
+    .product-card:hover { box-shadow: 0 12px 32px rgba(0,0,0,.1); transform: translateY(-4px); }
+    .product-card img { width: 100%; height: 200px; object-fit: cover; }
+    .product-body { padding: 1.25rem; }
+    .product-body h3 { font-weight: 700; color: var(--dark2); margin-bottom: .4rem; }
+    .product-body p { font-size: .85rem; color: var(--gray); line-height: 1.6; margin-bottom: .9rem; }
+    .product-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .tag {
+      background: var(--green-pale); color: var(--green2);
+      font-size: .75rem; font-weight: 600; padding: .25rem .65rem;
+      border-radius: 3px;
+    }
+
+    /* ── ABOUT ── */
+    .about { background: var(--light); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center; max-width: 1100px; margin: 0 auto;
+    }
+    .about img { width: 100%; border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,.15); }
+    .about-features { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2rem; }
+    .feat {
+      display: flex; gap: 1rem; align-items: flex-start;
+      background: var(--white); border-radius: 8px;
+      padding: 1.25rem; border-left: 3px solid var(--green3);
+    }
+    .feat-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: .1rem; }
+    .feat h4 { font-weight: 700; color: var(--dark2); margin-bottom: .25rem; }
+    .feat p { font-size: .85rem; color: var(--gray); line-height: 1.5; }
+
+    /* ── MAP ── */
+    .map-section { background: var(--white); padding: 0; }
+    .map-section iframe { width: 100%; height: 420px; border: none; display: block; }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--dark2); }
+    .contact .section-tag { color: var(--green3); }
+    .contact .section-title { color: var(--white); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; max-width: 1000px; margin: 3rem auto 0; align-items: start;
+    }
+    .contact-items { display: flex; flex-direction: column; gap: 1.25rem; }
+    .contact-item {
+      display: flex; gap: 1rem; align-items: flex-start;
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 8px; padding: 1.25rem;
+    }
+    .contact-item i { color: var(--green3); font-size: 1.25rem; margin-top: .15rem; flex-shrink: 0; }
+    .contact-item h4 { color: var(--white); font-weight: 600; margin-bottom: .2rem; font-size: .9rem; }
+    .contact-item p { color: rgba(255,255,255,.65); font-size: .85rem; line-height: 1.6; }
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-form input, .contact-form textarea {
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15);
+      border-radius: 6px; padding: .85rem 1rem; color: var(--white);
+      font-size: .9rem; font-family: 'Inter', sans-serif; width: 100%;
+      transition: border-color .2s;
+    }
+    .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,.35); }
+    .contact-form input:focus, .contact-form textarea:focus {
+      outline: none; border-color: var(--green3);
+    }
+    .contact-form textarea { resize: vertical; min-height: 130px; }
+    .contact-form button {
+      background: var(--green3); color: var(--dark); font-weight: 700;
+      font-size: .95rem; padding: 1rem; border: none; border-radius: 6px;
+      cursor: pointer; transition: background .2s, transform .2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .contact-form button:hover { background: var(--green2); transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark); border-top: 1px solid rgba(212,160,23,0.2);
+      padding: 3rem 5% 2rem;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem; margin-bottom: 2.5rem;
+    }
+    .footer-logo img { height: 52px; width: auto; margin-bottom: 1rem; }
+    .footer-desc { color: rgba(255,255,255,.55); font-size: .88rem; line-height: 1.7; }
+    .footer-socials { display: flex; gap: .75rem; margin-top: 1.25rem; }
+    .social-btn {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: rgba(255,255,255,.08); color: rgba(255,255,255,.6);
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; font-size: .9rem; transition: .2s;
+    }
+    .social-btn:hover { background: var(--green3); color: var(--dark); }
+    .footer-col h4 { color: var(--white); font-weight: 700; margin-bottom: 1.25rem; font-size: .9rem; letter-spacing: .05em; text-transform: uppercase; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .footer-col a { color: rgba(255,255,255,.55); text-decoration: none; font-size: .88rem; transition: color .2s; }
+    .footer-col a:hover { color: var(--green3); }
+    .footer-col p { color: rgba(255,255,255,.55); font-size: .88rem; line-height: 1.7; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 1.5rem; text-align: center;
+      color: rgba(255,255,255,.35); font-size: .82rem;
+    }
+
+    /* ── DEPARTMENT PAGES ── */
+    .dept-banner {
+      height: 260px; border-radius: 12px; margin-bottom: 2.5rem;
+      background-size: cover; background-position: center;
+      position: relative; box-shadow: 0 12px 32px rgba(0,0,0,.12);
+    }
+    .dept-banner::after {
+      content: ''; position: absolute; inset: 0; border-radius: 12px;
+      background: linear-gradient(to top, rgba(0,0,0,.45), rgba(0,0,0,.05));
+    }
+    .dept-intro { color: var(--gray); font-size: 1.05rem; line-height: 1.7; max-width: 720px; margin: 0 auto 3rem; text-align: center; }
+    .dept-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem; max-width: 1100px; margin: 0 auto 3rem;
+    }
+    .dept-card {
+      border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+      background: #fff; transition: box-shadow .25s, transform .25s;
+    }
+    .dept-card:hover { box-shadow: 0 12px 32px rgba(0,0,0,.1); transform: translateY(-4px); }
+    .dept-card-top {
+      height: 74px; display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; background: linear-gradient(135deg, var(--green), var(--green2));
+    }
+    .dept-card-photo { height: 190px; background-size: cover; background-position: center; }
+    .dept-card .product-body { padding: 1.1rem 1.25rem; }
+    .dept-card .product-body h3 { font-weight: 700; color: var(--dark2); margin-bottom: .35rem; font-size: 1rem; }
+    .dept-card .product-body p { font-size: .84rem; color: var(--gray); line-height: 1.55; margin-bottom: .75rem; }
+    .dept-video-wrap { max-width: 330px; margin: 0 auto 3.5rem; }
+    .dept-video-wrap video { width: 100%; border-radius: 16px; box-shadow: 0 14px 36px rgba(0,0,0,.2); display: block; }
+    .dept-video-cap { text-align: center; color: var(--gray); font-size: .88rem; margin-top: .8rem; }
+
+    /* ── VIEW SYSTEM ── */
+    .view { display: none; }
+    .view.active { display: block; }
+    .fade-in { animation: fadeUp .35s ease; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── PAGE HERO (inner pages) ── */
+    .page-hero {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--green) 100%);
+      padding: 120px 5% 60px; text-align: center;
+    }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem); color: var(--white); margin-bottom: .75rem;
+    }
+    .page-hero p { color: rgba(255,255,255,.65); font-size: 1.05rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .info-strip { grid-template-columns: 1fr; }
+      .info-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.15); }
+      .photo-grid, .about-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .photo-grid .big { grid-column: span 1; }
+      .products-grid { grid-template-columns: 1fr; }
+      .hero-cards { gap: .75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-logo"><img src="logo_transparent.png" alt="World Foods Halal Market"/></div>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showView('home')" class="nav-link active" data-view="home">Home</a></li>
+    <li><a href="#" onclick="showView('about')" class="nav-link" data-view="about">About</a></li>
+    <li><a href="#" onclick="showView('products')" class="nav-link" data-view="products">Products</a></li>
+    <li><a href="#" onclick="showView('meat')" class="nav-link" data-view="meat">🥩 Meat Counter</a></li>
+    <li><a href="#" onclick="showView('contact')" class="nav-link nav-cta" data-view="contact">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" id="ham" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#" onclick="showView('home');toggleMenu()">Home</a></li>
+    <li><a href="#" onclick="showView('about');toggleMenu()">About</a></li>
+    <li><a href="#" onclick="showView('products');toggleMenu()">Products</a></li>
+    <li><a href="#" onclick="showView('meat');toggleMenu()">🥩 Meat Counter</a></li>
+    <li><a href="#" onclick="showView('contact');toggleMenu()">Contact Us</a></li>
+  </ul>
+</div>
+
+<!-- ═══════════ HOME ═══════════ -->
+<div id="view-home" class="view active">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fas fa-certificate"></i> Certified Halal Grocery</div>
+      <h1>Minnesota's Favorite<br><em>Halal Market</em></h1>
+      <p>Fresh halal meats, Afghan fresh bread, international groceries, spices, nuts, dates and everyday essentials — all under one roof.</p>
+      <div class="hero-btns">
+        <a href="tel:6512520042" class="btn-gold"><i class="fas fa-phone"></i> (651) 252-0042</a>
+        <a href="https://maps.google.com/?q=6626+Penn+Ave+S+Minneapolis+MN+55423" target="_blank" class="btn-ghost"><i class="fas fa-map-marker-alt"></i> Get Directions</a>
+      </div>
+      <div class="hero-cards">
+        <div class="hero-card">
+          <div class="hero-card-num">3,200+</div>
+          <div class="hero-card-label">Products</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-num">100%</div>
+          <div class="hero-card-label">Halal Certified</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-num">Open Daily</div>
+          <div class="hero-card-label">10AM – 10PM</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info Strip -->
+  <div class="info-strip">
+    <div class="info-item">
+      <i class="fas fa-clock info-icon"></i>
+      <div><h4>Store Hours</h4><p>10:00 AM – 10:00 PM · Open 7 Days</p></div>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-map-marker-alt info-icon"></i>
+      <div><h4>Our Location</h4><p>6626 Penn Ave S, Minneapolis, MN 55423</p></div>
+    </div>
+    <div class="info-item">
+      <i class="fas fa-phone info-icon"></i>
+      <div><h4>Call Us</h4><p>(651) 252-0042</p></div>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <section class="categories">
+    <div class="text-center">
+      <span class="section-tag">What We Offer</span>
+      <h2 class="section-title">Shop Our Categories</h2>
+      <p class="section-sub">From fresh halal meats to international spices — everything your family needs in one place.</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card" onclick="showView('meat')" style="cursor:pointer; border:2px solid #15803d;"><div class="cat-icon">🥩</div><h3>Fresh Halal Meats</h3><p>Beef, lamb, goat & chicken — plus Chicken & Beef Suqaar, our Somali community favorite. Hand-slaughtered, certified halal.</p></div>
+      <div class="cat-card" onclick="showDept('produce')" style="cursor:pointer;"><div class="cat-icon">🥬</div><h3>Fresh Produce</h3><p>Fresh vegetables, herbs & seasonal fruit, restocked regularly</p></div>
+      <div class="cat-card" onclick="showDept('bread')" style="cursor:pointer;"><div class="cat-icon">🍞</div><h3>Afghan Fresh Bread</h3><p>Freshly baked traditional Afghan naan & breads daily</p></div>
+      <div class="cat-card" onclick="showDept('spices')" style="cursor:pointer;"><div class="cat-icon">🌶️</div><h3>Spices & Seasonings</h3><p>Authentic spices from Middle East, South Asia & Africa</p></div>
+      <div class="cat-card" onclick="showDept('rice')" style="cursor:pointer;"><div class="cat-icon">🌾</div><h3>Rice & Dry Goods</h3><p>Basmati, lentils, chana dal, chickpeas & more</p></div>
+      <div class="cat-card" onclick="showDept('groceries')" style="cursor:pointer;"><div class="cat-icon">🫙</div><h3>International Groceries</h3><p>Sauces, olives, pickles & condiments from around the world</p></div>
+      <div class="cat-card" onclick="showDept('nuts')" style="cursor:pointer;"><div class="cat-icon">🥜</div><h3>Nuts, Dates & Snacks</h3><p>Premium dates, mixed nuts, dried fruits & traditional snacks</p></div>
+      <div class="cat-card" onclick="showDept('biscuits')" style="cursor:pointer;"><div class="cat-icon">🍪</div><h3>Biscuits & Sweets</h3><p>International cookies, sweets and confectionery</p></div>
+      <div class="cat-card" onclick="showDept('household')" style="cursor:pointer;"><div class="cat-icon">🧴</div><h3>Household Items</h3><p>Cleaning supplies, personal care & everyday essentials</p></div>
+      <div class="cat-card" onclick="showDept('beverages')" style="cursor:pointer;"><div class="cat-icon">🥤</div><h3>Beverages & Drinks</h3><p>Red Bull, Vimto, Barbican, Laziza, juices & international sodas</p></div>
+      <div class="cat-card" onclick="showDept('perfumes')" style="cursor:pointer;"><div class="cat-icon">🌸</div><h3>Arabic Perfumes</h3><p>Authentic Arabic fragrances, attars & international perfume brands</p></div>
+      <div class="cat-card" onclick="showDept('frozen')" style="cursor:pointer;"><div class="cat-icon">🍦</div><h3>Frozen Desserts</h3><p>Kulfi, ice cream and traditional frozen South Asian sweets</p></div>
+      <div class="cat-card" onclick="showDept('art')" style="cursor:pointer;"><div class="cat-icon">🖼️</div><h3>Islamic Art & Decor</h3><p>Ayatul Kursi frames, Islamic calligraphy art and home decor</p></div>
+    </div>
+  </section>
+
+  <!-- Store Photos -->
+  <section class="photos">
+    <div class="text-center">
+      <span class="section-tag">See Inside</span>
+      <h2 class="section-title">Visit Our Store</h2>
+    </div>
+    <div class="photo-grid" style="max-width:1100px;margin:3rem auto 0;">
+      <div class="photo-item big">
+        <img src="storefront.jpg" alt="World Foods Halal Market Store Front"/>
+        <div class="photo-label">📍 6626 Penn Ave S, Minneapolis — Grocery, Bakery & Halal Meat</div>
+      </div>
+      <div class="photo-item">
+        <img src="aisle1.jpg" alt="Grocery aisles"/>
+        <div class="photo-label">Well-stocked grocery aisles</div>
+      </div>
+      <div class="photo-item">
+        <img src="aisle2.jpg" alt="International sauces"/>
+        <div class="photo-label">International sauces & condiments</div>
+      </div>
+      <div class="photo-item">
+        <img src="aisle3.jpg" alt="Nuts and dates"/>
+        <div class="photo-label">Nuts, dates & dry goods</div>
+      </div>
+      <div class="photo-item">
+        <img src="aisle4.jpg" alt="Snacks and biscuits"/>
+        <div class="photo-label">Snacks & biscuits from around the world</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <div class="map-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2823.9657352957747!2d-93.30861668445995!3d44.88283497909842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f627c78dd0e379%3A0x6f4d22f7d11fb3f8!2s6626%20Penn%20Ave%20S%2C%20Minneapolis%2C%20MN%2055423!5e0!3m2!1sen!2sus!4v1625555555555!5m2!1sen!2sus" allowfullscreen="" loading="lazy" title="World Foods Halal Market Location"></iframe>
+  </div>
+
+</div><!-- /home -->
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<div id="view-about" class="view">
+  <div class="page-hero">
+    <h1>About Us</h1>
+    <p>A family-owned halal grocery store proudly serving Minneapolis</p>
+  </div>
+  <section class="about">
+    <div class="about-grid">
+      <div>
+        <img src="storefront.jpg" alt="World Foods Halal Market store front"/>
+      </div>
+      <div>
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title">Serving Minneapolis with Quality Halal Products</h2>
+        <p class="section-sub">World Foods Halal Market is a family-owned grocery store proudly serving the Minneapolis community. We specialize in fresh halal meats, international groceries, Afghan fresh bread, dry goods, spices, nuts, dates and everyday essentials from around the world.</p>
+        <p class="section-sub" style="margin-top:1rem;">Our mission is simple — provide high-quality halal products, friendly service, and a welcoming shopping experience for every customer who walks through our doors.</p>
+        <div class="about-features">
+          <div class="feat"><div class="feat-icon">🏅</div><div><h4>Certified Halal</h4><p>All meats are hand-slaughtered and certified halal to the highest standards.</p></div></div>
+          <div class="feat"><div class="feat-icon">🌍</div><div><h4>Global Selection</h4><p>Products from the Middle East, South Asia, Africa, and beyond — all in one store.</p></div></div>
+          <div class="feat"><div class="feat-icon">🤝</div><div><h4>Community First</h4><p>Family-owned and deeply rooted in the Minneapolis community we serve.</p></div></div>
+          <div class="feat"><div class="feat-icon">💳</div><div><h4>EBT / SNAP Accepted</h4><p>We proudly accept EBT for eligible food items to serve all members of our community.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════ PRODUCTS ═══════════ -->
+<div id="view-products" class="view">
+  <div class="page-hero">
+    <h1>Our Products</h1>
+    <p>Fresh, quality products from around the world</p>
+  </div>
+  <section class="products">
+    <div class="products-grid">
+      <div class="product-card"><img src="aisle4.jpg" alt="Halal Meats"/><div class="product-body"><h3>Fresh Halal Meats</h3><p>Premium halal-certified beef, lamb, goat and chicken. Hand-slaughtered according to Islamic guidelines.</p><div class="product-tags"><span class="tag">Beef</span><span class="tag">Lamb</span><span class="tag">Goat</span><span class="tag">Chicken</span></div></div></div>
+      <div class="product-card"><img src="aisle1.jpg" alt="Groceries"/><div class="product-body"><h3>International Groceries</h3><p>Canned goods, cereals, dairy, cooking essentials and international brands from around the world.</p><div class="product-tags"><span class="tag">Dairy</span><span class="tag">Canned Goods</span><span class="tag">Cereals</span></div></div></div>
+      <div class="product-card"><img src="aisle2.jpg" alt="Sauces & Condiments"/><div class="product-body"><h3>Sauces & Condiments</h3><p>Hot sauces, chili garlic, olives, pickles and condiments from Pakistan, Middle East and beyond.</p><div class="product-tags"><span class="tag">Hot Sauce</span><span class="tag">Olives</span><span class="tag">Pickles</span></div></div></div>
+      <div class="product-card"><img src="aisle3.jpg" alt="Nuts & Dates"/><div class="product-body"><h3>Nuts, Dates & Dry Fruits</h3><p>Premium Medjool dates, Deglet Noor, mixed nuts, dried fruits and traditional Afghan snacks.</p><div class="product-tags"><span class="tag">Dates</span><span class="tag">Nuts</span><span class="tag">Dry Fruits</span></div></div></div>
+      <div class="product-card"><img src="aisle5.jpg" alt="Biscuits & Sweets"/><div class="product-body"><h3>Biscuits & Sweets</h3><p>Sooper biscuits, international cookies, wafers and traditional sweet treats from South Asia.</p><div class="product-tags"><span class="tag">Biscuits</span><span class="tag">Cookies</span><span class="tag">Sweets</span></div></div></div>
+      <div class="product-card"><img src="aisle6.jpg" alt="Rice & Grains"/><div class="product-body"><h3>Rice, Grains & Lentils</h3><p>Basmati rice, chana dal, kabuli chana, vermicelli, lentils and pulses in bulk and packaged.</p><div class="product-tags"><span class="tag">Basmati</span><span class="tag">Lentils</span><span class="tag">Chana Dal</span></div></div></div>
+      <div class="product-card"><img src="drinks1.jpg" alt="Beverages"/><div class="product-body"><h3>Beverages & Cold Drinks</h3><p>Red Bull, Monster, Vimto, Barbican, Carabao, Falooda, Badam milk, juices and more — chilled and ready.</p><div class="product-tags"><span class="tag">Energy Drinks</span><span class="tag">Vimto</span><span class="tag">Barbican</span><span class="tag">Juices</span></div></div></div>
+      <div class="product-card"><img src="drinks3.jpg" alt="Sodas"/><div class="product-body"><h3>Sodas & Water</h3><p>Coca-Cola, Pepsi, Fanta, Sprite, Mountain Dew, sparkling water, Gatorade and international sodas.</p><div class="product-tags"><span class="tag">Coca-Cola</span><span class="tag">Pepsi</span><span class="tag">Fanta</span><span class="tag">Water</span></div></div></div>
+      <div class="product-card"><img src="perfume.jpg" alt="Perfumes"/><div class="product-body"><h3>Arabic Perfumes & Fragrances</h3><p>Authentic Arabic attars, oud-based perfumes and international fragrance brands in our glass display case.</p><div class="product-tags"><span class="tag">Oud</span><span class="tag">Attar</span><span class="tag">Arabic Perfumes</span></div></div></div>
+      <div class="product-card"><img src="frozen.jpg" alt="Frozen Desserts"/><div class="product-body"><h3>Frozen Kulfi & Desserts</h3><p>Shahi Kulfi, malai kulfi, pistachio, chocolate and coconut flavors — traditional South Asian frozen treats.</p><div class="product-tags"><span class="tag">Kulfi</span><span class="tag">Malai</span><span class="tag">Pistachio</span></div></div></div>
+      <div class="product-card"><img src="islamic_art.jpg" alt="Islamic Art"/><div class="product-body"><h3>Islamic Art & Home Decor</h3><p>Beautiful Ayatul Kursi frames, Islamic calligraphy wall art and home decor for your family.</p><div class="product-tags"><span class="tag">Ayatul Kursi</span><span class="tag">Calligraphy</span><span class="tag">Frames</span></div></div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════ DEPARTMENT (dynamic) ═══════════ -->
+<div id="view-dept" class="view">
+  <div class="page-hero" style="background: linear-gradient(135deg, var(--dark) 0%, var(--green) 100%);">
+    <h1 id="dept-title"></h1>
+    <p id="dept-tagline"></p>
+  </div>
+  <section class="products">
+    <div style="max-width:1100px; margin:0 auto;">
+      <a href="#" onclick="showView('home');return false;" style="display:inline-flex;align-items:center;gap:.4rem;color:#166534;font-weight:600;font-size:.85rem;text-decoration:none;margin-bottom:1.5rem;"><i class="fas fa-arrow-left"></i> Back to all categories</a>
+      <div class="dept-banner" id="dept-banner"></div>
+      <p class="dept-intro" id="dept-intro"></p>
+      <div id="dept-video"></div>
+      <div class="dept-grid" id="dept-grid"></div>
+      <div style="background:#111827; border-radius:12px; padding:2rem; text-align:center; display:flex; align-items:center; justify-content:center; gap:2rem; flex-wrap:wrap;">
+        <div>
+          <p style="color:rgba(255,255,255,.6); font-size:.85rem; margin-bottom:.3rem;">Looking for something specific?</p>
+          <p style="color:#fff; font-size:1.1rem; font-weight:700;">Call us and we'll check our shelves for you.</p>
+        </div>
+        <a href="tel:6512520042" style="background:#15803d; color:#fff; padding:.85rem 2rem; border-radius:6px; text-decoration:none; font-weight:700; white-space:nowrap;">📞 Call (651) 252-0042</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<div id="view-contact" class="view">
+  <div class="page-hero">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you</p>
+  </div>
+  <section class="contact">
+    <div class="contact-grid">
+      <div class="contact-items">
+        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h4>Address</h4><p>6626 Penn Ave S<br>Minneapolis, MN 55423</p></div></div>
+        <div class="contact-item"><i class="fas fa-phone"></i><div><h4>Phone</h4><p>(651) 252-0042</p></div></div>
+        <div class="contact-item"><i class="fas fa-clock"></i><div><h4>Store Hours</h4><p>Monday – Sunday<br>10:00 AM – 10:00 PM</p></div></div>
+        <div class="contact-item"><i class="fas fa-envelope"></i><div><h4>Email Us</h4><p><a href="mailto:contact@wfhalal.com" style="color:#4ade80;text-decoration:none;">contact@wfhalal.com</a></p></div></div>
+      <div class="contact-item"><i class="fas fa-credit-card"></i><div><h4>We Accept</h4><p>Cash · Credit/Debit Cards · EBT/SNAP</p></div></div>
+      </div>
+      <form class="contact-form" onsubmit="handleForm(event)">
+        <input type="text" placeholder="Your Name" required/>
+        <input type="email" placeholder="Your Email" required/>
+        <input type="tel" placeholder="Your Phone (optional)"/>
+        <textarea placeholder="How can we help you?"></textarea>
+        <button type="submit"><i class="fas fa-paper-plane" style="margin-right:.5rem"></i>Send Message</button>
+      </form>
+    </div>
+  </section>
+  <div class="map-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2823.9657352957747!2d-93.30861668445995!3d44.88283497909842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f627c78dd0e379%3A0x6f4d22f7d11fb3f8!2s6626%20Penn%20Ave%20S%2C%20Minneapolis%2C%20MN%2055423!5e0!3m2!1sen!2sus!4v1625555555555!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div>
+
+<!-- ═══════════ MEAT COUNTER ═══════════ -->
+<div id="view-meat" class="view">
+  <div class="page-hero" style="background: linear-gradient(135deg, #1a0505 0%, #7f1d1d 100%);">
+    <h1>🥩 Fresh Halal Meat Counter</h1>
+    <p>Hand-slaughtered, certified halal — fresh daily at 6626 Penn Ave S</p>
+  </div>
+
+  <section style="background:#fff; padding: 60px 5%;">
+    <div style="max-width:1100px; margin:0 auto;">
+
+      <!-- Halal Badge Banner -->
+      <div style="background: linear-gradient(135deg, #0d5c2e, #166534); border-radius:12px; padding:2rem; text-align:center; margin-bottom:3rem;">
+        <p style="color:#d4a017; font-size:.8rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin-bottom:.5rem;">Certified Halal</p>
+        <h2 style="color:#fff; font-family:'Playfair Display',serif; font-size:1.8rem; margin-bottom:.5rem;">All Meats are Hand-Slaughtered</h2>
+        <p style="color:rgba(255,255,255,.7); font-size:.95rem;">Zabiha Halal certified · Fresh cuts available daily · Custom cuts on request</p>
+      </div>
+
+      <!-- Meat Grid -->
+      <h2 style="font-family:'Playfair Display',serif; font-size:1.75rem; color:#111827; margin-bottom:2rem; text-align:center;">Available Cuts</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:1.5rem; margin-bottom:3rem;">
+
+        <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden; transition:.25s;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
+          <img src="meat_chicken_whole.jpg" alt="Whole Chicken" style="width:100%;height:200px;object-fit:cover;"/>
+          <div style="padding:1.25rem;">
+            <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Whole Chicken</h3>
+            <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Fresh whole halal chicken, perfect for roasting or grilling</p>
+            <span style="background:#f0fdf4;color:#166534;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Halal Certified</span>
+          </div>
+        </div>
+
+        <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
+          <img src="meat_chicken_breast.jpg" alt="Chicken Breast" style="width:100%;height:200px;object-fit:cover;"/>
+          <div style="padding:1.25rem;">
+            <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Chicken Breast</h3>
+            <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Boneless skinless chicken breast — lean and fresh</p>
+            <span style="background:#f0fdf4;color:#166534;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Halal Certified</span>
+          </div>
+        </div>
+
+        <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
+          <img src="meat_drumstick.jpg" alt="Chicken Drumsticks" style="width:100%;height:200px;object-fit:cover;"/>
+          <div style="padding:1.25rem;">
+            <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Chicken Drumsticks</h3>
+            <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Fresh halal chicken drumsticks — great for BBQ & curries</p>
+            <span style="background:#f0fdf4;color:#166534;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Halal Certified</span>
+          </div>
+        </div>
+
+        <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
+          <img src="meat_chicken_legs.jpg" alt="Chicken Legs" style="width:100%;height:200px;object-fit:cover;"/>
+          <div style="padding:1.25rem;">
+            <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Chicken Legs (No Skin)</h3>
+            <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Skinless chicken legs — perfect for healthy cooking</p>
+            <span style="background:#f0fdf4;color:#166534;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Halal Certified</span>
+          </div>
+        </div>
+
+        <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
+          <img src="meat_ground_beef.jpg" alt="Ground Beef" style="width:100%;height:200px;object-fit:cover;"/>
+          <div style="padding:1.25rem;">
+            <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Ground Beef</h3>
+            <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Fresh halal ground beef — ideal for kabobs, burgers & keema</p>
+            <span style="background:#f0fdf4;color:#166534;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Halal Certified</span>
+          </div>
+        </div>
+
+        <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
+          <img src="meat_lamb.png" alt="Lamb" style="width:100%;height:200px;object-fit:cover;background:#f9f9f9;"/>
+          <div style="padding:1.25rem;">
+            <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Lamb / Mutton</h3>
+            <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Fresh halal lamb leg, chops and shoulder cuts available</p>
+            <span style="background:#f0fdf4;color:#166534;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Halal Certified</span>
+          </div>
+        </div>
+
+        <div style="border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;" onmouseover="this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'" onmouseout="this.style.boxShadow='none'">
+          <img src="meat_goat_liver.jpg" alt="Goat Liver" style="width:100%;height:200px;object-fit:cover;"/>
+          <div style="padding:1.25rem;">
+            <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Goat Liver</h3>
+            <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Fresh halal goat liver — a traditional favorite</p>
+            <span style="background:#f0fdf4;color:#166534;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Halal Certified</span>
+          </div>
+        </div>
+
+
+        <!-- Chicken Suqaar -->
+        <div style="border:2px solid #15803d; border-radius:10px; overflow:hidden; position:relative;" onmouseover="this.style.boxShadow='0 12px 32px rgba(21,128,61,.25)'" onmouseout="this.style.boxShadow='none'">
+          <div style="position:absolute;top:12px;right:12px;background:#d4a017;color:#111;font-size:.7rem;font-weight:800;padding:.25rem .6rem;border-radius:3px;letter-spacing:.05em;z-index:1;">⭐ COMMUNITY FAVORITE</div>
+          <img src="chicken_suqaar.jpg" alt="Chicken Suqaar" style="width:100%;height:200px;object-fit:cover;"/>
+          <div style="padding:1.25rem;">
+            <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Chicken Suqaar 🍗 <span style="font-size:.7rem;color:#15803d;font-weight:600;">(Freshly Diced)</span></h3>
+            <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Freshly diced halal chicken — the beloved Somali community favorite. Perfect for stir-fry, rice dishes and stews.</p>
+            <div style="display:flex;gap:.5rem;flex-wrap:wrap;">
+              <span style="background:#f0fdf4;color:#166534;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Halal Certified</span>
+              <span style="background:#fff7ed;color:#c2410c;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Somali Favorite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beef Suqaar -->
+        <div style="border:2px solid #15803d; border-radius:10px; overflow:hidden; position:relative;" onmouseover="this.style.boxShadow='0 12px 32px rgba(21,128,61,.25)'" onmouseout="this.style.boxShadow='none'">
+          <div style="position:absolute;top:12px;right:12px;background:#d4a017;color:#111;font-size:.7rem;font-weight:800;padding:.25rem .6rem;border-radius:3px;letter-spacing:.05em;z-index:1;">⭐ COMMUNITY FAVORITE</div>
+          <img src="beef_suqaar.png" alt="Beef Suqaar" style="width:100%;height:200px;object-fit:cover;"/>
+          <div style="padding:1.25rem;">
+            <h3 style="font-weight:700;color:#111827;margin-bottom:.3rem;">Beef Suqaar 🥩 <span style="font-size:.7rem;color:#15803d;font-weight:600;">(Freshly Diced)</span></h3>
+            <p style="font-size:.85rem;color:#6b7280;margin-bottom:.75rem;">Freshly diced halal beef — tender cubes perfect for the classic Somali suqaar dish with onions and peppers.</p>
+            <div style="display:flex;gap:.5rem;flex-wrap:wrap;">
+              <span style="background:#f0fdf4;color:#166534;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Halal Certified</span>
+              <span style="background:#fff7ed;color:#c2410c;font-size:.75rem;font-weight:600;padding:.25rem .65rem;border-radius:3px;">Somali Favorite</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Call to Order Banner -->
+      <div style="background:#111827; border-radius:12px; padding:2rem; text-align:center; display:flex; align-items:center; justify-content:center; gap:2rem; flex-wrap:wrap;">
+        <div>
+          <p style="color:rgba(255,255,255,.6); font-size:.85rem; margin-bottom:.3rem;">Custom cuts available — call ahead</p>
+          <p style="color:#fff; font-size:1.1rem; font-weight:700;">Need a specific cut? We've got you covered.</p>
+        </div>
+        <a href="tel:6512520042" style="background:#15803d; color:#fff; padding:.85rem 2rem; border-radius:6px; text-decoration:none; font-weight:700; white-space:nowrap;">
+          📞 Call (651) 252-0042
+        </a>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="logo_transparent.png" alt="World Foods Halal Market"/></div>
+      <p class="footer-desc">Your neighborhood halal grocery store in Minneapolis. Fresh meats, international groceries, Afghan bread and everyday essentials — Shop Local, Eat Global.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#" onclick="showView('home')">Home</a></li>
+        <li><a href="#" onclick="showView('about')">About Us</a></li>
+        <li><a href="#" onclick="showView('products')">Our Products</a></li>
+        <li><a href="#" onclick="showView('contact')">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Store Info</h4>
+      <p>6626 Penn Ave S<br>Minneapolis, MN 55423<br><br>(651) 252-0042<br><a href="mailto:contact@wfhalal.com" style="color:#4ade80;text-decoration:none;">contact@wfhalal.com</a><br><br>Open Daily<br>10:00 AM – 10:00 PM</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 World Foods Halal Market. All rights reserved. · Minneapolis, MN</p>
+  </div>
+</footer>
+
+<script>
+  function showView(name) {
+    document.querySelectorAll('.view').forEach(v => { v.classList.remove('active'); });
+    const el = document.getElementById('view-' + name);
+    if (el) { el.classList.add('active', 'fade-in'); window.scrollTo(0,0); }
+    document.querySelectorAll('.nav-link').forEach(a => {
+      a.classList.toggle('active', a.dataset.view === name);
+    });
+  }
+  // ── Department pages ──────────────────────────────────────────
+  const DEPARTMENTS = {
+    bread: {
+      title: '🍞 Afghan Fresh Bread & Bakery', tagline: 'Baked fresh in-store, every single day', banner: 'afghani_bread.jpg', video: true,
+      intro: 'Traditional Afghan naan baked fresh daily, plus a case full of handmade Afghan cookies and sweets. Come early for the warmest batch, or call ahead to reserve yours.',
+      items: [
+        { img:'afghani_bread.jpg',     n:'Afghan Naan', d:'Soft, oven-fresh flatbread baked in-store daily', t:'Baked Daily' },
+        { img:'cookie_iced.jpg',       n:'Afghan Iced Cookies', d:'Buttery cookies finished with a sweet icing drizzle', t:'Bakery' },
+        { img:'cookie_jam.jpg',        n:'Jam-Filled Butter Cookies', d:'Piped butter cookies with a raspberry jam center', t:'Bakery' },
+        { img:'cookie_pistachio.jpg',  n:'Pistachio Butter Cookies', d:'Swirled butter cookies topped with crushed pistachio', t:'Bakery' },
+        { img:'cookie_khatai.jpg',     n:'Nan-e Khatai', d:'Melt-in-your-mouth shortbread with pistachio', t:'Traditional' },
+        { img:'cake_pistachio.jpg',    n:'Pistachio Cake Slices', d:'Golden cake squares topped with roasted pistachio', t:'Sweet' }
+      ]
+    },
+    produce: {
+      title: '🥬 Fresh Produce', tagline: 'Fresh vegetables, herbs & fruit — restocked regularly', banner: 'produce.jpg',
+      intro: 'A colorful produce section with the vegetables, herbs and fruit your recipes call for — including the specialty items you won\'t always find at a regular grocery store.',
+      items: [
+        { i:'🥬', n:'Leafy Greens', d:'Lettuce, spinach, methi & more', t:'Fresh' },
+        { i:'🫑', n:'Peppers & Chilies', d:'Bell peppers, green & hot chilies', t:'Fresh' },
+        { i:'🥒', n:'Cucumbers & Squash', d:'Cucumbers, zucchini & bottle gourd', t:'Fresh' },
+        { i:'🌿', n:'Fresh Herbs', d:'Cilantro, mint, parsley & dill', t:'Fresh' },
+        { i:'🧅', n:'Onions & Potatoes', d:'Everyday cooking staples', t:'Staple' },
+        { i:'🍎', n:'Seasonal Fruit', d:'Fresh fruit in season', t:'Fresh' }
+      ]
+    },
+    spices: {
+      title: '🌶️ Spices & Seasonings', tagline: 'Authentic flavors from the Middle East, South Asia & Africa', banner: 'aisle2.jpg',
+      intro: 'A full wall of whole and ground spices, blends and herbs to bring any recipe to life — sourced from trusted brands your family already knows.',
+      items: [
+        { i:'🌿', n:'Whole & Ground Spices', d:'Cumin, coriander, turmeric, paprika & more', t:'Everyday' },
+        { i:'🫛', n:'Cardamom & Cinnamon', d:'Green cardamom, cinnamon sticks & cloves', t:'Whole' },
+        { i:'🍛', n:'Curry & Masala Blends', d:'Garam masala, biryani & shawarma mixes', t:'Blends' },
+        { i:'🌸', n:'Saffron', d:'Premium threads for rice & desserts', t:'Premium' },
+        { i:'🌱', n:'Dried Herbs', d:'Fenugreek, bay leaves, dried mint', t:'Herbs' },
+        { i:'🧂', n:'Salts & Seasonings', d:'Himalayan salt, chaat masala, seasoning salts', t:'Everyday' }
+      ]
+    },
+    rice: {
+      title: '🌾 Rice & Dry Goods', tagline: 'Pantry staples in every size', banner: 'aisle6.jpg',
+      intro: 'Premium basmati, lentils, flours and cooking essentials — available in family and bulk sizes at everyday prices.',
+      items: [
+        { i:'🍚', n:'Basmati Rice', d:'Long-grain, sella & brown — bags up to 40 lb', t:'Bulk' },
+        { i:'🫘', n:'Lentils & Dal', d:'Red, green, masoor & chana dal', t:'Staple' },
+        { i:'🫛', n:'Chickpeas', d:'Kabuli chana, black chana, whole & split', t:'Staple' },
+        { i:'🌾', n:'Flour', d:'Atta, chapati flour & all-purpose', t:'Baking' },
+        { i:'🍝', n:'Vermicelli & Noodles', d:'Seviyan, roasted vermicelli & pasta', t:'Pantry' },
+        { i:'🫙', n:'Cooking Oil & Ghee', d:'Sunflower oil, desi ghee & olive oil', t:'Cooking' }
+      ]
+    },
+    groceries: {
+      title: '🫙 International Groceries', tagline: 'A world of flavor on one aisle', banner: 'aisle1.jpg',
+      intro: 'Sauces, dairy, canned goods, tea and everyday brands from the Middle East, South Asia, Africa and beyond.',
+      items: [
+        { i:'🌶️', n:'Sauces & Condiments', d:'Hot sauce, chili garlic, tahini & ketchup', t:'Everyday' },
+        { i:'🫒', n:'Olives & Pickles', d:'Mixed olives, mango & lime pickle', t:'Jarred' },
+        { i:'🥫', n:'Canned Goods', d:'Beans, chickpeas & tomato paste', t:'Pantry' },
+        { i:'🧀', n:'Dairy', d:'Yogurt, feta, paneer & labneh', t:'Fresh' },
+        { i:'🥣', n:'Cereals & Breakfast', d:'International breakfast brands', t:'Everyday' },
+        { i:'🍵', n:'Tea & Coffee', d:'Black tea, cardamom tea & Turkish coffee', t:'Everyday' }
+      ]
+    },
+    nuts: {
+      title: '🥜 Nuts, Dates & Snacks', tagline: 'Premium dates and everyday treats', banner: 'aisle3.jpg',
+      intro: 'Fresh dates, mixed nuts and dried fruit — perfect for gatherings, gifting and Ramadan — plus traditional snacks the whole family loves.',
+      items: [
+        { i:'🌴', n:'Medjool Dates', d:'Large, soft premium dates', t:'Premium' },
+        { i:'🍯', n:'Deglet Noor Dates', d:'Classic everyday dates', t:'Everyday' },
+        { i:'🥜', n:'Mixed Nuts', d:'Almonds, cashews, pistachios & walnuts', t:'Fresh' },
+        { i:'🍇', n:'Dried Fruits', d:'Apricots, raisins, figs & prunes', t:'Dried' },
+        { i:'🫘', n:'Roasted Snacks', d:'Roasted chana & seeds', t:'Snack' },
+        { i:'🍿', n:'Traditional Snacks', d:'Namkeen, Bombay mix & chips', t:'Snack' }
+      ]
+    },
+    biscuits: {
+      title: '🍪 Biscuits & Sweets', tagline: 'Tea-time favorites & traditional sweets', banner: 'aisle5.jpg',
+      intro: 'From the biscuits you grew up with to boxed sweets for special occasions — stocked with international and South Asian favorites.',
+      items: [
+        { i:'🍪', n:'Tea Biscuits', d:'Sooper, Nice, Marie & popular brands', t:'Everyday' },
+        { i:'🧇', n:'Wafers & Cookies', d:'Imported wafers & cream cookies', t:'Snack' },
+        { i:'🍫', n:'Chocolates', d:'Imported bars & gift boxes', t:'Treat' },
+        { i:'🍮', n:'Traditional Sweets', d:'Barfi, halwa & gulab jamun', t:'Sweet' },
+        { i:'🍰', n:'Rusks & Cake', d:'Bakery rusk & tea cake', t:'Bakery' }
+      ]
+    },
+    household: {
+      title: '🧴 Household Items', tagline: 'Everyday essentials for the home', banner: 'aisle4.jpg',
+      intro: 'The cleaning, personal-care and kitchen basics you need — so you can pick them up in the same trip as your groceries.',
+      items: [
+        { i:'🧼', n:'Cleaning Supplies', d:'Detergents, dish soap & surface cleaners', t:'Home' },
+        { i:'🪥', n:'Personal Care', d:'Soap, shampoo & toothpaste', t:'Care' },
+        { i:'🧻', n:'Paper Goods', d:'Tissues, napkins & foil', t:'Home' },
+        { i:'🍽️', n:'Kitchen Essentials', d:'Storage, utensils & disposables', t:'Kitchen' },
+        { i:'👶', n:'Baby Care', d:'Diapers & wipes', t:'Care' }
+      ]
+    },
+    beverages: {
+      title: '🥤 Beverages & Drinks', tagline: 'Chilled and ready to grab', banner: 'drinks1.jpg',
+      intro: 'A full cold case of energy drinks, traditional favorites, juices and sodas — plus the drink mixes for your next gathering.',
+      items: [
+        { i:'⚡', n:'Energy Drinks', d:'Red Bull, Monster & Carabao', t:'Chilled' },
+        { i:'🍇', n:'Vimto & Barbican', d:'Fruit cordials & malt beverages', t:'Popular' },
+        { i:'🥤', n:'Laziza & Falooda', d:'Traditional drink mixes', t:'Mix' },
+        { i:'🥛', n:'Badam & Rooh Afza', d:'Almond milk & rose syrup', t:'Traditional' },
+        { i:'🧃', n:'Juices', d:'Mango, guava & international juices', t:'Juice' },
+        { i:'🥫', n:'Sodas & Water', d:'Cola, Fanta, sparkling & still water', t:'Chilled' }
+      ]
+    },
+    perfumes: {
+      title: '🌸 Arabic Perfumes', tagline: 'Oud, attar & fragrance in our glass case', banner: 'perfume.jpg',
+      intro: 'Authentic Arabic fragrances, alcohol-free attars and bakhoor — beautiful for yourself or as a gift.',
+      items: [
+        { i:'🌿', n:'Oud Perfumes', d:'Rich, long-lasting oud-based fragrances', t:'Premium' },
+        { i:'💧', n:'Attars', d:'Alcohol-free traditional fragrance oils', t:'Traditional' },
+        { i:'🔥', n:'Bakhoor & Incense', d:'Scented wood chips & burners', t:'Home' },
+        { i:'🧴', n:'Fragrance Brands', d:'International & designer-inspired scents', t:'Popular' },
+        { i:'🎁', n:'Gift Sets', d:'Boxed perfume gift sets', t:'Gift' }
+      ]
+    },
+    frozen: {
+      title: '🍦 Frozen Desserts & Foods', tagline: 'Traditional frozen treats & ready-to-cook', banner: 'frozen.jpg',
+      intro: 'Shahi Kulfi in every flavor, ice cream, and ready-to-cook frozen foods to make weeknight cooking easy.',
+      items: [
+        { i:'🍧', n:'Shahi Kulfi', d:'Malai, pistachio, chocolate & coconut', t:'Popular' },
+        { i:'🍨', n:'Ice Cream', d:'Family tubs & bars', t:'Frozen' },
+        { i:'🫓', n:'Frozen Paratha', d:'Ready-to-cook flatbread', t:'Ready' },
+        { i:'🥟', n:'Samosa & Spring Rolls', d:'Frozen appetizers', t:'Ready' },
+        { i:'🥦', n:'Frozen Vegetables', d:'Peas, okra, spinach & mixes', t:'Frozen' }
+      ]
+    },
+    art: {
+      title: '🖼️ Islamic Art & Decor', tagline: 'Beautiful pieces for your home', banner: 'islamic_art.jpg',
+      intro: 'Framed calligraphy, prayer essentials and home decor to bring warmth and faith into your space.',
+      items: [
+        { i:'🖼️', n:'Ayatul Kursi Frames', d:'Framed calligraphy in several sizes', t:'Decor' },
+        { i:'✨', n:'Calligraphy Wall Art', d:'Arabic calligraphy prints & canvas', t:'Decor' },
+        { i:'🧎', n:'Prayer Mats', d:'Soft, quality janamaz', t:'Prayer' },
+        { i:'📿', n:'Tasbih & Beads', d:'Prayer beads in many styles', t:'Prayer' },
+        { i:'🏺', n:'Home Decor', d:'Decorative Islamic home pieces', t:'Decor' }
+      ]
+    }
+  };
+
+  function showDept(key) {
+    const d = DEPARTMENTS[key];
+    if (!d) return;
+    document.getElementById('dept-title').textContent = d.title;
+    document.getElementById('dept-tagline').textContent = d.tagline;
+    document.getElementById('dept-banner').style.backgroundImage = "url('" + d.banner + "')";
+    document.getElementById('dept-intro').textContent = d.intro;
+    document.getElementById('dept-video').innerHTML = d.video
+      ? '<div class="dept-video-wrap"><video autoplay muted loop playsinline preload="metadata" poster="bakery_video_poster.jpg">' +
+        '<source src="bakery_video.mp4" type="video/mp4"/></video>' +
+        '<p class="dept-video-cap">🎥 Watch our naan baked fresh, right in the store</p></div>'
+      : '';
+    document.getElementById('dept-grid').innerHTML = d.items.map(function (it) {
+      var top = it.img
+        ? '<div class="dept-card-photo" style="background-image:url(\'' + it.img + '\')"></div>'
+        : '<div class="dept-card-top">' + it.i + '</div>';
+      return '<div class="dept-card">' + top +
+             '<div class="product-body"><h3>' + it.n + '</h3><p>' + it.d + '</p>' +
+             '<span class="tag">' + it.t + '</span></div></div>';
+    }).join('');
+    showView('dept');
+  }
+
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  }
+  function handleForm(e) {
+    e.preventDefault();
+    alert('Thank you! We will get back to you soon.');
+    e.target.reset();
+  }
+</script>
+</body>
+</html>
