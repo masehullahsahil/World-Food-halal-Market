@@ -25,3 +25,32 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.key === "Escape") setMenu(false);
   });
 });
+
+// Autoplay the in-store bakery video only when the visitor has not asked for
+// reduced motion. The markup ships with controls and no autoplay attribute, so
+// without JS the poster shows and playback stays under the visitor's control.
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector("video[data-autoplay-unless-reduced]");
+  if (!video) return;
+
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  function apply() {
+    if (reduced.matches) {
+      video.loop = false;
+      video.pause();
+    } else if (video.paused && !video.dataset.userPaused) {
+      video.play().catch(() => {});
+    }
+  }
+
+  video.addEventListener("pause", () => {
+    video.dataset.userPaused = "true";
+  });
+  video.addEventListener("play", () => {
+    delete video.dataset.userPaused;
+  });
+
+  apply();
+  reduced.addEventListener("change", apply);
+});
