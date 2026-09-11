@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-labelledby="title desc">
+  <title id="title">World Foods Halal Market</title>
+  <desc id="desc">World Foods Halal Market wordmark with a green and gold WF monogram.</desc>
+  <defs>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15803d"/>
+      <stop offset="1" stop-color="#0d5c2e"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(10 10)">
+    <circle cx="100" cy="100" r="91" fill="url(#leaf)"/>
+    <circle cx="100" cy="100" r="80" fill="none" stroke="#d4a017" stroke-width="5"/>
+    <path d="M42 66h22l18 84 19-55h18l19 55 18-84h22l-29 113h-21l-18-52-18 52H71L42 66Z" fill="#fff"/>
+    <path d="M147 43c17 3 30 13 38 29-18 2-33-3-44-16-5-6-7-11-8-15 4 0 9 1 14 2Z" fill="#facc15"/>
+  </g>
+  <g transform="translate(220 40)">
+    <text x="0" y="58" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="1">WORLD FOODS</text>
+    <rect x="1" y="77" width="445" height="4" rx="2" fill="#d4a017"/>
+    <text x="1" y="126" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="700" letter-spacing="5">HALAL MARKET</text>
+  </g>
+</svg>
