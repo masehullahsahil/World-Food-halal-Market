@@ -1,3 +1,24 @@
+// Give the fixed header a shadow once the page scrolls, so it reads as a
+// layer above the content instead of a flat band welded to the hero.
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+
+  let ticking = false;
+  function update() {
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+    ticking = false;
+  }
+
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(update);
+  }, { passive: true });
+
+  update();
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector(".nav-toggle");
   const menu = document.getElementById("primary-menu");
