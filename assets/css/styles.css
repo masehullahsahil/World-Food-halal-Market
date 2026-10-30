@@ -408,6 +408,13 @@ h1, .section-heading h2, .page-hero h1 {
 }
 .notice h2 { font-size: 1.2rem; margin-bottom: .5rem; }
 .notice p:not(.eyebrow) { color: #78350f; }
+.policy-wrap { max-width: 780px; margin: 0 auto; }
+.policy-wrap h2 { font-size: 1.45rem; margin: 2.25rem 0 .6rem; }
+.policy-wrap h2:first-of-type { margin-top: 1.75rem; }
+.policy-wrap p { color: var(--gray); line-height: 1.75; margin-bottom: 1rem; }
+.policy-wrap ul { color: var(--gray); line-height: 1.75; margin: 0 0 1rem 1.25rem; }
+.policy-wrap li { margin-bottom: .5rem; }
+.policy-wrap a { color: var(--green2); }
 .cta-band {
   max-width: 1120px;
   margin: 3rem auto 0;
