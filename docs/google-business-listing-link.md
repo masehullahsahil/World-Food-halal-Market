@@ -4,7 +4,7 @@
 
 | Field | Value |
 |---|---|
-| Business | World Foods Halal Market |
+| Business | World Food Halal Market |
 | Address | 6626 Penn Ave S, Richfield, MN 55423 |
 | Google Place ID | `ChIJ41SgKgAn9ocRr2k5KAPY2K4` |
 
