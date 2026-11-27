@@ -1,6 +1,6 @@
 # UI/UX and Conversion Audit
 
-**Site:** wfhalal.com — World Foods Halal Market, 6626 Penn Ave S, Richfield, MN 55423
+**Site:** wfhalal.com — World Food Halal Market, 6626 Penn Ave S, Richfield, MN 55423
 **Reviewed:** `main` after PR #7 (`40c7558`)
 **Scope:** analysis only. No production HTML, CSS or JavaScript was changed by this audit.
 
